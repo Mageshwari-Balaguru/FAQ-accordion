@@ -1,0 +1,92 @@
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light-pink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: var(--Light-pink);
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height:100vh;
+    font-family: 'Work Sans';
+    display:grid;
+    place-content: center;
+
+}
+.wrapper{
+    background-color: var(--White);
+    max-width: 700px;
+    height:100vh;
+    border-radius: 10px;
+    padding:1.5rem;
+    margin:1rem;
+
+}
+img,svg{
+    max-width:100%;
+    display:block;
+}
+.title{
+    display:flex;
+    gap:2rem;
+}
+.title h1{
+    font-size: 3rem;
+    font-weight: 700;
+}
+.icon-img{
+    width:30px;
+}
+button{
+    cursor:pointer;
+    background-color: transparent;
+    width:100%;
+    padding:1rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: left;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:1rem;
+    border:0;
+}
+.btn:hover{
+    color:hsl(292, 16%, 49%);
+}
+.minus-icon{
+    display:none;
+}
+.content_box {
+    padding:10px;
+}
+.container .wrapper .content_box:not(:last-child){
+    border-bottom: 2px solid var(--Grayish-purple);
+    
+}
+.container .wrapper .content_box #content{
+    max-height:0px;
+    overflow:hidden
+}
+.container .wrapper .content_box #label{
+    font-weight: 700;
+    padding:10px 0;
+}
+
+p{
+    font-size: 1.2rem;
+}
+
+@media only screen and (max-width:400px){
+    .container{
+        background-image: url(./assets/images/background-pattern-mobile.svg);
+    }
+    
+}
